@@ -11,7 +11,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * User
  *
  * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(columns={"username"})})
- * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\Repository\UserRepository")
  */
 class User implements AdvancedUserInterface {
 
@@ -202,7 +202,7 @@ class User implements AdvancedUserInterface {
 	
 	// AdvancedUserInterface methods...
 	public function getRoles() {
-		if ($this->isAdmin) {
+		if ($this->admin) {
 			return array('ROLE_ADMIN');
 		}
 		return array('ROLE_USER');

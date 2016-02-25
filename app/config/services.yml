@@ -8,5 +8,13 @@ services:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
   movie_service:
-    class: AppBundle\Services\MovieService
-    arguments: ["@doctrine"]
+      class: AppBundle\Services\Entity\MovieService
+      arguments: ["@doctrine"]
+
+  rating_service:
+      class: AppBundle\Services\Entity\RatingService
+      arguments: ["@doctrine"]
+
+  password_helper:
+      class: AppBundle\Services\Security\PasswordHelper
+      arguments: ["@security.encoder_factory"]
