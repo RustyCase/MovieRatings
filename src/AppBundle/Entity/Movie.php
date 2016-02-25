@@ -11,8 +11,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Table(name="movie")
  * @ORM\Entity(repositoryClass="AppBundle\Entity\Repository\MovieRepository")
  */
-class Movie
-{
+class Movie {
     /**
      * @var int
      *
@@ -57,8 +56,7 @@ class Movie
      */
     private $ratings;
 
-    public function __construct()
-    {
+    public function __construct() {
     	$this->ratings = new ArrayCollection();
     }
 
@@ -67,8 +65,7 @@ class Movie
      *
      * @return int
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -79,8 +76,7 @@ class Movie
      *
      * @return Movie
      */
-    public function setTitle($title)
-    {
+    public function setTitle($title) {
         $this->title = $title;
 
         return $this;
@@ -91,8 +87,7 @@ class Movie
      *
      * @return string
      */
-    public function getTitle()
-    {
+    public function getTitle() {
         return $this->title;
     }
 
@@ -103,8 +98,7 @@ class Movie
      *
      * @return Movie
      */
-    public function setDescription($description)
-    {
+    public function setDescription($description) {
         $this->description = $description;
 
         return $this;
@@ -115,8 +109,7 @@ class Movie
      *
      * @return string
      */
-    public function getDescription()
-    {
+    public function getDescription() {
         return $this->description;
     }
 
@@ -127,8 +120,7 @@ class Movie
      *
      * @return Movie
      */
-    public function setDirector($director)
-    {
+    public function setDirector($director) {
         $this->director = $director;
 
         return $this;
@@ -139,8 +131,7 @@ class Movie
      *
      * @return string
      */
-    public function getDirector()
-    {
+    public function getDirector() {
         return $this->director;
     }
 
@@ -151,8 +142,7 @@ class Movie
      *
      * @return Movie
      */
-    public function setReleaseDate($releaseDate)
-    {
+    public function setReleaseDate($releaseDate) {
         $this->releaseDate = $releaseDate;
 
         return $this;
@@ -163,8 +153,7 @@ class Movie
      *
      * @return \DateTime
      */
-    public function getReleaseDate()
-    {
+    public function getReleaseDate() {
         return $this->releaseDate;
     }
 
@@ -175,8 +164,7 @@ class Movie
      *
      * @return Movie
      */
-    public function addRating(\AppBundle\Entity\Rating $rating)
-    {
+    public function addRating(\AppBundle\Entity\Rating $rating) {
         $this->ratings[] = $rating;
 
         return $this;
@@ -187,8 +175,7 @@ class Movie
      *
      * @param \AppBundle\Entity\Rating $rating
      */
-    public function removeRating(\AppBundle\Entity\Rating $rating)
-    {
+    public function removeRating(\AppBundle\Entity\Rating $rating) {
         $this->ratings->removeElement($rating);
     }
 
@@ -197,8 +184,7 @@ class Movie
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getRatings()
-    {
+    public function getRatings() {
         return $this->ratings;
     }
 }

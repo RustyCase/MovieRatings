@@ -3,9 +3,7 @@
 
 namespace Tests\AppBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
-class APIMovieControllerTest extends WebTestCase {
+class APIMovieControllerTest extends APIBaseControllerTest {
 	
 	public function testGetMovies() {
 		

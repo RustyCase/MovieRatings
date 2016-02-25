@@ -43,8 +43,7 @@ class Rating {
      *
      * @return Rating
      */
-    public function setRating($rating)
-    {
+    public function setRating($rating) {
         $this->rating = $rating;
 
         return $this;
@@ -55,8 +54,7 @@ class Rating {
      *
      * @return integer
      */
-    public function getRating()
-    {
+    public function getRating() {
         return $this->rating;
     }
 
@@ -67,8 +65,7 @@ class Rating {
      *
      * @return Rating
      */
-    public function setUserId(\AppBundle\Entity\User $userId)
-    {
+    public function setUserId(\AppBundle\Entity\User $userId) {
         $this->userId = $userId;
 
         return $this;
@@ -79,8 +76,7 @@ class Rating {
      *
      * @return \AppBundle\Entity\User
      */
-    public function getUserId()
-    {
+    public function getUserId() {
         return $this->userId;
     }
 
@@ -91,8 +87,7 @@ class Rating {
      *
      * @return Rating
      */
-    public function setMovieId(\AppBundle\Entity\Movie $movieId)
-    {
+    public function setMovieId(\AppBundle\Entity\Movie $movieId) {
         $this->movieId = $movieId;
 
         return $this;
@@ -103,8 +98,7 @@ class Rating {
      *
      * @return \AppBundle\Entity\Movie
      */
-    public function getMovieId()
-    {
+    public function getMovieId() {
         return $this->movieId;
     }
 }

@@ -229,8 +229,7 @@ class User implements AdvancedUserInterface {
      *
      * @return boolean
      */
-    public function getAdmin()
-    {
+    public function getAdmin() {
         return $this->admin;
     }
 
@@ -239,8 +238,7 @@ class User implements AdvancedUserInterface {
      *
      * @return boolean
      */
-    public function getEnabled()
-    {
+    public function getEnabled() {
         return $this->enabled;
     }
 
@@ -251,8 +249,7 @@ class User implements AdvancedUserInterface {
      *
      * @return User
      */
-    public function addRating(\AppBundle\Entity\Rating $rating)
-    {
+    public function addRating(\AppBundle\Entity\Rating $rating) {
         $this->ratings[] = $rating;
 
         return $this;
@@ -263,8 +260,7 @@ class User implements AdvancedUserInterface {
      *
      * @param \AppBundle\Entity\Rating $rating
      */
-    public function removeRating(\AppBundle\Entity\Rating $rating)
-    {
+    public function removeRating(\AppBundle\Entity\Rating $rating) {
         $this->ratings->removeElement($rating);
     }
 
@@ -273,8 +269,7 @@ class User implements AdvancedUserInterface {
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getRatings()
-    {
+    public function getRatings() {
         return $this->ratings;
     }
 }
